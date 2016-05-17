@@ -15,11 +15,11 @@
 -rabbit_boot_step({?MODULE,
                    [{description, "Custom auth mechanism"},
                     {mfa,         {rabbit_registry, register,
-                                   [auth_mechanism, <<"CUSTOM">>, ?MODULE]}},
+                                   [auth_mechanism, <<"EXTERNAL">>, ?MODULE]}},
                     {requires,    rabbit_registry},
                     {enables,     kernel_ready},
                     {cleanup,     {rabbit_registry, unregister,
-                                   [auth_mechanism, <<"CUSTOM">>]}}]}).
+                                   [auth_mechanism, <<"EXTERNAL">>]}}]}).
 
 handle_response(Response, Custom) ->
     rabbit_log:info("===== handle_response"),
