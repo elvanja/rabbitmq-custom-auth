@@ -1,0 +1,8 @@
+{mapping, "rabbitmq_custom_auth.user_path", "rabbitmq_custom_auth.user_path",
+    [{datatype, string}, {validators, ["uri"]}]}.
+
+{mapping, "rabbitmq_custom_auth.vhost_path", "rabbitmq_custom_auth.vhost_path", 
+    [{datatype, string}, {validators, ["uri"]}]}.
+
+{mapping, "rabbitmq_custom_auth.resource_path", "rabbitmq_custom_auth.resource_path", 
+    [{datatype, string}, {validators, ["uri"]}]}.

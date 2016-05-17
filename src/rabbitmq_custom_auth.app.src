@@ -1,0 +1,24 @@
+{application, rabbitmq_custom_auth, [
+    {registered, []},
+    {description, "Custom Authentication & Authorization"},
+    {vsn, "0.0.1"},
+    {modules, [rabbit_custom_auth_app]},
+    {mod, {rabbit_custom_auth_app, []}},
+    {env, [
+            {user_path,     "TODO"},
+            {vhost_path,    "TODO"},
+            {resource_path, "TODO"}
+    ]},
+    {rabbit, [{auth_backends, [rabbit_custom_auth]}]},
+    {broker_version_requirements, [
+      "3.6.0",
+      "3.7.0"
+    ]},
+    {applications, [
+            kernel,
+            stdlib,
+            inets,
+            amqp_client,
+            mochiweb
+    ]}
+]}.
